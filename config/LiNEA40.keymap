@@ -19,13 +19,13 @@
 
 &mt {
     flavor = "hold-preferred";
-    // quick-tap-ms = <300>;
+    quick-tap-ms = <300>;
     tapping-term-ms = <200>;
 };
 
 &lt {
     flavor = "hold-preferred";
-    // quick-tap-ms = <300>;
+    quick-tap-ms = <300>;
     tapping-term-ms = <200>;
 };
 
