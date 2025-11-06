@@ -80,10 +80,10 @@
 //            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
 //            <&zip_xy_to_scroll_mapper>;
 //    };
-scroller {
+    scroller {
         layers = <SCROLL>;
         input-processors =
-            <&zip_xy_scaler 0 1>, /* ▼ [追記] Xを0倍(無効)、Yを1倍(そのまま)にする */
+            <&zip_xy_scaler 0.5, 1>, /* ▼ [追記] Xを0倍(無効)、Yを1倍(そのまま)にする */
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>;
     };
