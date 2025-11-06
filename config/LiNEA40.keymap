@@ -83,7 +83,7 @@
     scroller {
         layers = <SCROLL>;
         input-processors =
-            <&zip_xy_scaler 0.5, 1>, /* ▼ [追記] Xを0倍(無効)、Yを1倍(そのまま)にする */
+            <&zip_xy_scaler 0 1 1 1>, /* X軸の倍率を0 (0/1)、Y軸の倍率を1 (1/1) に設定 */
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>;
     };
