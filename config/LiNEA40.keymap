@@ -47,8 +47,7 @@
     acceleration-exponent = <0>;
 };
 
-/ {
-    input_processors {
+&input_processors { // 既存の input_processors ノードを拡張する
         zip_wheel_scaler: zip_wheel_scaler {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
@@ -63,7 +62,6 @@
             codes = <INPUT_REL_X INPUT_REL_Y>;
             track-remainders;
         };
-    };
 };
 
 &msc_input_listener {
