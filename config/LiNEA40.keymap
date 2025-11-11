@@ -47,7 +47,8 @@
     acceleration-exponent = <0>;
 };
 
-&input_processors { // 既存の input_processors ノードを拡張する
+/ {
+    input_processors {
         zip_wheel_scaler: zip_wheel_scaler {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
@@ -55,13 +56,7 @@
             codes = <INPUT_REL_WHEEL>;
             track-remainders;
         };
-        zip_xy_scaler: zip_xy_scaler {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <INPUT_EV_REL>;
-            codes = <INPUT_REL_X INPUT_REL_Y>;
-            track-remainders;
-        };
+    };
 };
 
 &msc_input_listener {
@@ -72,16 +67,9 @@
 };
 
 &trackball_listener {
-//    scroller {
-//       layers = <SCROLL>;
-//       input-processors =
-//            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-//            <&zip_xy_to_scroll_mapper>;
-//    };
     scroller {
         layers = <SCROLL>;
         input-processors =
-            <&zip_xy_scaler 0 1 1 1>, /* X軸の倍率を0 (0/1)、Y軸の倍率を1 (1/1) に設定 */
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>;
     };
