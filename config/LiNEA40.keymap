@@ -1,5 +1,5 @@
-
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 150
+
 // 移植元: LiNEA40.keymap（ベース設定保持）
 
 #include <dt-bindings/zmk/input_transform.h>
@@ -30,16 +30,21 @@
 };
 
 // トラックボール移動速度設定
+
 &mmv {
     // センサー読取間隔 (ms)。少ないほど早い。
+
     delay-ms = <20>;
     trigger-period-ms = <5>;
+
     // 最大速度に達するまでの時間。少ないほど早く最大速度に達する
+
     time-to-max-speed-ms = <100>;
     acceleration-exponent = <2>;
 };
 
 // スクロール速度設定
+
 &msc {
     delay-ms = <30>;
     trigger-period-ms = <3>;
@@ -145,6 +150,13 @@
             flavor = "tap-preferred";
             quick-tap-ms = <200>;
         };
+
+        td_layer_esc: td_layer_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LAYER_ESC";
+            #binding-cells = <0>;
+            bindings = <&mo 7>, <&kp ESC>;
+        };
     };
 };
 
@@ -227,9 +239,9 @@
         default_layer {
             bindings = <
 &kp Q                      &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O     &kp P
-&kp A                      &kp S         &kp D         &kp F             &kp G                                                 &kp H        &kp J  &kp K      &kp L     &kp SEMICOLON
+&lt 8 A                    &kp S         &kp D         &kp F             &kp G                                                 &kp H        &kp J  &kp K      &kp L     &lt 7 SEMICOLON
 &mt_balanced LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B                                                 &kp N        &kp M  &kp COMMA  &kp DOT   &mt_balanced RIGHT_SHIFT SLASH
-&mo 8                      &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt_balanced 2 SPACE  &lt 5 LANG1    &lt 2 BACKSPACE  &lt 1 ENTER         &mkp MB1   &mkp MB2  &lt 7 ESCAPE
+&kp LCTRL                  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt_balanced 2 SPACE  &lt 5 LANG1    &lt 2 BACKSPACE  &lt 1 ENTER         &mkp MB1   &mkp MB2  &lt 7 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
