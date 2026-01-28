@@ -182,7 +182,7 @@
 
         right_ctrl {
             bindings = <&kp RCTRL>;
-            key-positions = <39 40>;
+            key-positions = <28 29>;
         };
 
         left_ctrl {
@@ -217,7 +217,7 @@
 
         right_ctrl_shift {
             bindings = <&kp RC(RIGHT_SHIFT)>;
-            key-positions = <29 28>;
+            key-positions = <40 39>;
         };
 
         ZenkakuHankaku {
@@ -238,10 +238,10 @@
 
         default_layer {
             bindings = <
-&kp Q                      &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O      &kp P
-&lt_balanced 4 A           &kp S         &kp D         &kp F             &kp G                                                 &kp H        &kp J  &kp K      &kp L      &lt_balanced 4 SEMICOLON
-&mt_balanced LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B                                                 &kp N        &kp M  &kp COMMA  &kp DOT    &mt_balanced RIGHT_SHIFT SLASH
-&mo 8                      &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt_balanced 2 SPACE  &lt 5 LANG1    &lt 2 BACKSPACE  &lt 1 ENTER         &mo 4      &kp RCTRL  &td_l7_esc
+&kp Q                      &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I          &kp O      &kp P
+&lt_balanced 4 A           &kp S         &kp D         &kp F             &kp G                                                 &kp H        &kp J  &kp K          &kp L      &lt_balanced 4 SEMICOLON
+&mt_balanced LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B                                                 &kp N        &kp M  &kp COMMA      &kp DOT    &mt_balanced RIGHT_SHIFT SLASH
+&mo 8                      &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANGUAGE_2  &lt_balanced 2 SPACE  &lt 5 LANG1    &lt 2 BACKSPACE  &lt 1 ENTER         &kp RIGHT_WIN  &kp RCTRL  &lt 7 ESCAPE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -319,10 +319,10 @@
 
         MOUSE_RIGHT {
             bindings = <
-&kp LC(Q)             &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                        &kp LC(Y)  &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)
-&kp LC(A)             &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(LS(T))                    &kp LC(H)  &mkp MB1   &mkp MB3       &mkp MB2     &kp LC(SEMICOLON)
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                        &kp LC(N)  &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)
-&kp LCTRL             &trans     &trans     &trans     &trans         &trans    &trans  &trans                &trans         &trans       &kp RCTRL
+&kp LC(Q)             &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                            &kp LC(Y)      &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)
+&kp LC(A)             &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(LS(T))                        &kp LC(H)      &mkp MB1   &mkp MB3       &mkp MB2     &kp LC(SEMICOLON)
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                            &kp LC(N)      &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)
+&kp LCTRL             &trans     &trans     &trans     &trans         &trans    &kp DELETE  &kp RC(ENTER)             &trans         &trans       &kp RCTRL
             >;
         };
 
@@ -330,10 +330,10 @@
 
         MOUSE_LEFT {
             bindings = <
-&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                    &kp LC(Y)  &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)
-&kp LC(A)  &kp LC(S)  &mkp MB2   &mkp MB1   &mkp MB3                     &kp LC(H)  &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                    &kp LC(N)  &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &mt RIGHT_SHIFT LC(SLASH)
-&kp LCTRL  &trans     &trans     &trans     &trans     &trans    &trans  &trans                &trans         &trans       &kp RCTRL
+&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                        &kp LC(Y)      &kp LC(U)  &kp LC(I)      &kp LC(O)    &kp LC(P)
+&kp LC(A)  &kp LC(S)  &mkp MB2   &mkp MB1   &mkp MB3                         &kp LC(H)      &kp LC(J)  &kp LC(K)      &kp LC(L)    &kp LC(SEMI)
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)                        &kp LC(N)      &kp LC(M)  &kp LC(COMMA)  &kp LC(DOT)  &mt RIGHT_SHIFT LC(SLASH)
+&kp LCTRL  &trans     &trans     &trans     &trans     &trans    &kp DELETE  &kp LC(ENTER)             &trans         &trans       &kp RCTRL
             >;
         };
     };
